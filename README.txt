@@ -1,1 +1,1 @@
-Bei diesem Projekt möchte ich Ein Programm zur Kontaktverwaltung erstellen
+Bei diesem Projekt möchte ich Ein Programm zur Kundenverwaltung erstellen.
