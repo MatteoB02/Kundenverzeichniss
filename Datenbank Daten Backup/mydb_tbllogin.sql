@@ -16,28 +16,29 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `tblplz`
+-- Table structure for table `tbllogin`
 --
 
-DROP TABLE IF EXISTS `tblplz`;
+DROP TABLE IF EXISTS `tbllogin`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tblplz` (
-  `PLZ` int(11) NOT NULL,
-  `Ort` varchar(45) NOT NULL,
-  PRIMARY KEY (`PLZ`),
-  UNIQUE KEY `PLZ_UNIQUE` (`PLZ`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE `tbllogin` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `Benutzername` varchar(45) NOT NULL,
+  `Passwort` varchar(45) NOT NULL,
+  `isAdmin` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tblplz`
+-- Dumping data for table `tbllogin`
 --
 
-LOCK TABLES `tblplz` WRITE;
-/*!40000 ALTER TABLE `tblplz` DISABLE KEYS */;
-INSERT INTO `tblplz` VALUES (3904,'Naters');
-/*!40000 ALTER TABLE `tblplz` ENABLE KEYS */;
+LOCK TABLES `tbllogin` WRITE;
+/*!40000 ALTER TABLE `tbllogin` DISABLE KEYS */;
+INSERT INTO `tbllogin` VALUES (1,'Matteo','Bfo12345',NULL),(2,'kevin','kevin',NULL);
+/*!40000 ALTER TABLE `tbllogin` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -49,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-14 15:54:10
+-- Dump completed on 2018-12-21 15:29:57
